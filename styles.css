@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --White: #ffffff;
+    --Light-gray: #d6e2f0;
+    --Grayish-blue: #7b879d;
+    --Dark-blue: #1f3251;
+    --Font-size: 15px;
+    --Weight1: 400;
+    --Waigth2: 700;
+    --font-family: 'Outfit', sans-serif;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--Light-gray);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    max-width: 290px;
+    overflow: hidden;
+    background-color: var(--White);
+    padding: 16px;
+    border-radius: 1.3rem;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.image {
+    height: 60%;
+}
+
+.image img {
+    height: 100%;
+    width: 100%;
+    border-radius: .5rem;
+}
+
+h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: calc(var(--Font-size) + 5px);
+    font-family: var(--font-family);
+    font-weight: var(--Weight2);
+    color: var(--Dark-blue);
+}
+
+h3+p {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: var(--font-family);
+    font-weight: var(--Waigth2);
+    color: var(--Grayish-blue);
+    font-size: var(--Font-size);
+}
+
+.attribution p {
+    text-align: center;
+    font-size: calc(var(--Font-size) - 4px);
+}
+
+.attribution {
+    position: relative;
+    bottom: 5px;
+}
+
+.attribution p a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: blueviolet;
+}
+
+.attribution p a::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 0;
+    bottom: 0;
+    background-color: blueviolet;
+    transition: width 150ms ease-in-out;
+}
+
+.attribution p a:hover::before {
+    width: 100%;
+}
